@@ -37,10 +37,13 @@
   </div>
   </div>
   <script>
-    var typed = new Typed('#element', {
+    function type() {
+      var typed = new Typed('#element', {
       strings: ['So what are we all about?'],
-      typeSpeed: 50,
-    });
+      typeSpeed: 200,
+    })
+    }
+    setInterval(type(), 1000);
   </script>
   <script>
     setTimeout(() => {
