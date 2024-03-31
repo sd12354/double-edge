@@ -2,9 +2,10 @@ body {
   background: linear-gradient(-45deg, #d16ffb, #56ddf5, #6d6df4, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-  height: 1000vh;  
+  height: 700vh;  
   margin:auto;
-  user-select: none; 
+  user-select: none;
+  overflow-x: hidden;
 }
 @keyframes gradient {
 	0% {
@@ -127,6 +128,7 @@ body {
   color: rgb(255, 255, 255);
   font-weight: bolder;
   font-size: 1.5rem;
+  margin: 12px;
 }
 
 h2 {
@@ -244,15 +246,17 @@ input:checked + .slider:before {
 
 .map {
   justify-content: center;
-  left: 60%;
-  right: 0px;
+  left: 20vw;
+  right: 0;
+  margin: auto;
   position: absolute;
-  top: 180vh;
+  top: 190vh;
   height: 2vh;
+  float: right;
 }
 .map h2 {
   position: relative;
-  top: 60px;
+  top: 100px;
   font-size: 3rem;
   text-align: center;
 }
@@ -260,6 +264,7 @@ input:checked + .slider:before {
   font-size: 2rem;
   height: 10px;
   font-weight: lighter;
+  text-align: center;
 }
 .map img {
   position: relative;
@@ -267,16 +272,12 @@ input:checked + .slider:before {
   height: 32rem;
   rotate: -10deg;
 }
-.map img:hover {
-  transition: 1s ease-in-out;
-  rotate: 0deg;
-  height: 39rem;
-}
 
 figcaption {
   font-family: "Questrial", sans-serif;
-  text-align: center;
+  text-align: left;
   color: white;
+
 }
 
 .about {
@@ -334,3 +335,59 @@ figcaption {
   font-size: 1.45rem;
   font-family: "Questrial", sans-serif;
 }
+#chart_div {
+  position: relative;
+  top: 200px;
+}
+.chart1 h3 {
+  color: white;
+  text-align: center;
+  font-size: 1.45rem;
+  font-family: "Questrial", sans-serif;
+  position: relative;
+  top: 160px;
+}
+.chart1 h4 {
+  color: white;
+  text-align: center;
+  font-size: 1.45rem;
+  font-family: "Questrial", sans-serif;
+  position: relative;
+  top: 10px;
+}
+.fire1 {
+  height: 100px;
+  width: 100px;
+  border-radius: 75px;
+  background-color: rgb(255, 137, 137);
+  position: absolute;
+}
+.fire2 {
+  height: 100px;
+  width: 100px;
+  border-radius: 75px;
+  background-color: rgb(255, 137, 137);
+  position: absolute;
+}
+.fire3 {
+  height: 100px;
+  width: 100px;
+  border-radius: 75px;
+  background-color: rgb(255, 137, 137);
+  position: absolute;
+}
+.fire4 {
+  height: 100px;
+  width: 100px;
+  border-radius: 75px;
+  background-color: rgb(255, 137, 137);
+  position: absolute;
+}
+.fire5 {
+  height: 100px;
+  width: 100px;
+  border-radius: 75px;
+  background-color: rgb(255, 137, 137);
+  position: absolute;
+}
+

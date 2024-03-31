@@ -31,6 +31,45 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
 </head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+
+  // Load the Visualization API and the corechart package.
+  google.charts.load('current', {'packages':['corechart']});
+
+  // Set a callback to run when the Google Visualization API is loaded.
+  google.charts.setOnLoadCallback(drawChart);
+
+  // Callback that creates and populates a data table,
+  // instantiates the pie chart, passes in the data and
+  // draws it.
+  function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Acres Burned'],
+          ['2010',  188813],
+          ['2011',  131198],
+          ['2012',  746610],
+          ['2013',  602557],
+          ['2014',  555044],
+          ['2015',  880268],
+          ['2016',  1381405],
+          ['2017',  1548429],
+          ['2018',  1975086],
+          ['2019',  259823],
+          ['2020',  4397809],
+          ['2021',  2278171]
+        ]);
+
+    // Set chart options
+    var options = {'title':'Acres Burned in California vs. Year',
+                   'width':1000,
+                   'height':600};
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+</script>
 <body>
   <div id="loader" class="loader">
   </div>
@@ -39,7 +78,7 @@
   <img src="/assets/logo.png" alt="" class="logo" data-aos="fade-in">
   <div class="nav" data-aos="fade-in">
     <a href="about.html">About Us</a>
-    <a href="data.html">Data</a>
+    <a href="data.html">How we work</a>
   </div>
   <h2 data-aos="fade-up" data-aos-delay="250">How have the rampant wildfires in California impacted the housing market?</h2>
   <div class="scroll-downs" data-aos="fade-up" data-aos-delay="450">
@@ -55,12 +94,25 @@
       <figure>
         <h2>California</h2>
         <img src="/assets/cali.png" alt="" data-aos="flip-right">
+        <span class="fire1">Camp Fire</span>
+        <span class="fire2">Valley Fire</span>
+        <span class="fire3">Tubbs Fire</span>
+        <span class="fire4">Thomas Fire</span>
+        <span class="fire5">Woolsey Fire</span>
         <figcaption>In the areas within the perimeters, home purchases declined by an average of 38% during the years after the blazes.</figcaption>
       </figure>
     </div>
     <div class="chart1">
       <div>
+        <h4>Bar Graph of Housing Price Appreciation vs. Distance from Fire in 2020</h3>\
         <canvas id="myChart"></canvas>
+      </div>
+      <h3>Line Graph of Acres Burned in California vs. Year</h3>
+      <div id="chart_div"></div>
+      <div class="graph3">
+        <h3>Trend Between </h3>
+        <img src="/assets/graph3.png" alt="">
+        <p>A new report from Redfin looks at home values three years following a wild fire. It found that in areas directly hit by a fire, home values increased 21%, but in areas outside of the fire zone, housing prices increased 33% during the same period.</p>
       </div>
       <script>
         function updateDateTime() {
