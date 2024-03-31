@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" type="icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <div id="loader" class="loader">
+  </div>
+  <p class="loading-txt" id="loading-text">You're not in Kansas any more...</p>
+  <div id="content" class="hidden">
+  <div class="nav">
+    <a href="home.html">Home</a>
+  </div>
+  <div class="about">
+    <h1 id="element"></h1>
+    <p>
+      At Double Edge, we are dedicated to providing insightful analysis and comprehensive information about the impact of wildfires on housing markets. Our mission is to empower individuals, communities, and policymakers with the knowledge they need to navigate the complex challenges posed by wildfires and their aftermath.
+      Double Edge is committed to delivering accurate and timely data-driven insights into how wildfires affect housing markets across different regions. We understand the profound impact that wildfires can have on homeowners, renters, real estate professionals, and local economies, and we are passionate about helping our audience understand and respond to these challenges effectively.
+      <br><br>
+      Through our website, we offer a range of resources, including articles, reports, and interactive tools, designed to educate and inform our audience about wildfire-related issues. Whether you're a homeowner looking to assess the risk of wildfires in your area, a real estate investor evaluating market trends, or a policymaker seeking data-driven solutions, Double Edge provides the information you need to make informed decisions.
+      At Double Edge, we believe in the power of knowledge to drive positive change. By shedding light on the impact of wildfires on housing markets, we aim to foster resilience, promote sustainable development, and build stronger, more resilient communities in the face of environmental challenges.
+      Thank you for visiting Double Edge. Together, we can navigate the complexities of wildfire impacts and work towards a safer, more secure future for all.
+    </p>
+  </div>
+  </div>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['So what are we all about?'],
+      typeSpeed: 50,
+    });
+  </script>
+  <script>
+    setTimeout(() => {
+      AOS.init();
+      new kursor({
+          type: 2,
+          color:'#FFFFFF',
+      })
+  }, 2200)
+  </script>
+</body>
+</html>

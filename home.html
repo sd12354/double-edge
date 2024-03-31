@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Double Edge</title>
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+  <link href="stylesheet" type="text/css" href="ripple.min.css">
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="ripple.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+  <script src="//cdn.jsdelivr.net/npm/jquery-mapael@2.2.0/js/jquery.mapael.min.js"></script>
+  <script src="/js/jQuery-Mapael-2.2.0/"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  <script src="/datamaps.world.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="loader" class="loader">
+  </div>
+  <p class="loading-txt" id="loading-text">You're not in Kansas any more...</p>
+  <div id="content" class="hidden">
+  <img src="/assets/logo.png" alt="" class="logo" data-aos="fade-in">
+  <div class="nav" data-aos="fade-in">
+    <a href="about.html">About Us</a>
+    <a href="data.html">Data</a>
+  </div>
+  <h2 data-aos="fade-up" data-aos-delay="250">How have the rampant wildfires in California impacted the housing market?</h2>
+  <div class="scroll-downs" data-aos="fade-up" data-aos-delay="450">
+    <div class="mousey">
+      <div class="scroller"></div>
+    </div>
+  </div>
+  <span id="datetime" class="time"></span>
+  <div class="charts">
+    <p data-aos="slide-left">Let's see how we tackled this challenge</p>
+    <p data-aos="slide-right" class="right">We analyzed the housing market in California before and after the recent wildfires.</p>
+    <div class="map">
+      <figure>
+        <h2>California</h2>
+        <img src="/assets/cali.png" alt="" data-aos="flip-right">
+        <figcaption>In the areas within the perimeters, home purchases declined by an average of 38% during the years after the blazes.</figcaption>
+      </figure>
+    </div>
+    <div class="chart1">
+      <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      <script>
+        function updateDateTime() {
+        // create a new `Date` object
+        const now = new Date();
+        var h= now.getHours();
+        var m= now.getMinutes();
+        var s= now.getSeconds();
+        // get the current date and time as a string
+        const currentDateTime = h + ':' + m + ":" + s;
+
+        // update the `textContent` property of the `span` element with the `id` of `datetime`
+        document.querySelector('#datetime').textContent = currentDateTime;
+      }
+
+      // call the `updateDateTime` function every second
+      setInterval(updateDateTime, 1000);
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+      const ctx = document.getElementById('myChart');
+      ctx.style.color = "white"
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Less than 1 mile', '1 mile', '1-5 miles', 'Greater than 5 miles'],
+          datasets: [{
+            label: 'Housing Price Appreciation % vs. Distance from Fire in 2020',
+            data: [0.61, 5.1,7.21,12.3],
+            borderWidth: 5,
+            color: 'rgba(255, 204, 205, 0.93)',
+            backgroundColor: ['rgba(255, 204, 205, 0.93)', 'rgba(255, 136, 138, 0.93)','rgba(255, 75, 78, 0.93)','rgba(255, 0, 0, 1)']
+          }]
+        },
+        options: {
+          fullSize: true,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+        </script>
+        </div>
+      </div>
+    </div>
+    <div id="container" style="position: relative; width: 500px; height: 300px;"></div>
+  <script src="https://unpkg.com/kursor"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="/js/script.js"></script>
+    <script>
+      setTimeout(() => {
+        AOS.init();
+        new kursor({
+            removeDefaultCursor: true,
+            type: 2,
+            color:'#FFFFFF',
+        })
+    }, 2200)
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="js/script.js"></script>
+  <link rel="icon" type="icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="loader" class="loader">
+  </div>
+  <p class="loading-txt" id="loading-text">Checking the gravitational constant in your locale...</p>
+  <div id="content" class="hidden">
+  <div class="nav">
+    <a href="home.html">Home</a>
+  </div>
+  <div class="content">
+
+    <h1>Sources</h1>
+    <p>Here is a list of the different libraries and API’s that were used to create this, being able to build on the giants of others is a great honor and we are very grateful.
+    </p>
+    <span style="font-weight: bolder;">Javascript Libraries</span>
+    <br><br>
+    <span style="font-weight: bolder;">Chart.js:</span> <a href="https://github.com/chartjs/Chart.js"> https://github.com/chartjs/Chart.js</a>
+    <br><br>
+    <span  style="font-weight: bolder;">AOS:</span><a href="https://github.com/michalsnik/aos"> https://github.com/michalsnik/aos</a>
+    <br><br>
+    <span style="font-weight: bolder;" >Typed.js:</span><a href="https://github.com/mattboldt/typed.js"> https://github.com/mattboldt/typed.js</a>
+    <br><br>
+  </div>
+</div>
+<script>
+  setTimeout(() => {
+    AOS.init();
+    new kursor({
+        type: 2,
+        color:'#FFFFFF',
+    })
+}, 2200)
+</script>
+</body>
+</html>
