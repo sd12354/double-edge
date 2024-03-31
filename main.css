@@ -2,7 +2,7 @@ body {
   background: linear-gradient(-45deg, #d16ffb, #56ddf5, #6d6df4, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-  height: 750vh;  
+  height: 650vh;  
   margin:auto;
   user-select: none;
   overflow-x: hidden;
@@ -21,7 +21,7 @@ body {
 
 .scroll-downs {
   position: absolute;
-  top: 85vh;
+  top: 70vh;
   right: 0;
   bottom: 0;
   left: 0;
@@ -223,8 +223,9 @@ figcaption {
   font-family: "Questrial", sans-serif;
   text-align: center;
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 32px;
+  font-weight: lighter;
 }
 
 .about {
@@ -361,4 +362,16 @@ figcaption {
   left:0;
   right:0;
 
+}
+
+.left2 {
+  text-align: right;
+  position: relative;
+  padding: 16px;
+  top: 50vh;
+  color: white;
+  font-size: 3rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: bolder;
+  padding: 32px;
 }
